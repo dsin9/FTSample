@@ -1,0 +1,268 @@
+.table-condensed>thead>tr>th, .table-condensed>tbody>tr>th, .table-condensed>tfoot>tr>th, .table-condensed>thead>tr>td, .table-condensed>tbody>tr>td, .table-condensed>tfoot>tr>td {
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+.daterangepicker td.start-date {
+    border-radius: 0px; 
+}
+
+.daterangepicker td.end-date {
+    border-radius: 0px; 
+}
+
+.ag-moderndark .ag-column-drop-horizontal {
+   background-color: #222;
+}
+
+
+.moderndark .daterangepicker table {
+	color: #fff;
+}
+
+.moderndark .calendar-table {
+	font-family: "Open Sans", Arial, sans-serif;
+	font-size: 14px;
+	background-color: #282828;
+    color: #aaa;
+    border: 1px solid #131313;
+}
+
+.moderndark .daterangepicker {
+	font-family: "Open Sans", Arial, sans-serif;
+	font-size: 14px;
+	background-color: #222;
+	color: #fff;
+}
+
+.moderndark .ranges li {
+	font-family: "Open Sans", Arial, sans-serif;
+	font-size: 14px;
+	background-color: #282828;
+    color: #fff;
+    border: 1px solid #131313;
+}
+
+.moderndark .ranges li.active {
+    background: #5a78a7;
+    border: 1px solid #5a78a7;
+    color: #fff;
+}
+
+.moderndark .daterangepicker .input-mini.active, 
+.moderndark .daterangepicker .input-mini {
+	font-family: "Open Sans", Arial, sans-serif;
+	font-size: 14px;
+	background-color: #282828;
+    color: #fff;
+    border: 1px solid #131313;
+}
+
+.moderndark .daterangepicker .table-condensed td {
+	font-family: "Open Sans", Arial, sans-serif;
+	font-size: 14px;
+	background-color: #282828;
+    color: #fff;
+}
+
+.moderndark .daterangepicker td.start-date {
+    background-color: #5a78a7;
+    border-color: transparent;
+    color: #fff;
+}
+
+.moderndark .daterangepicker td.in-range {
+    background-color: #ebf4f8;
+    border-color: transparent;
+    color: #000;
+    border-radius: 0;
+}
+
+.moderndark .daterangepicker td.end-date {
+   background-color: #5a78a7;
+    border-color: transparent;
+    color: #fff;
+}
+
+
+.moderndark .daterangepicker td.off, .moderndark .daterangepicker td.off.in-range, 
+.moderndark .daterangepicker td.off.start-date, 
+.moderndark .daterangepicker td.off.end-date {
+    background-color: #282828;
+    color: #aaa;
+    border-color: transparent;
+}
+
+.moderndark .daterangepicker .calendar th{
+	  color: #fff;
+}
+
+.btn-success, .btn-success:hover {
+    color: #fff;
+    background-color: #3C5385;
+    border-color: #2A3446;
+}
+
+.classicfipmt .daterangepicker {
+	font-family: "Tahoma", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	color: #000;
+	background: rgb(240, 240, 240);
+	font-size: 11px;
+}
+
+.classicfipmt .daterangepicker table {
+	color: #fff;
+}
+
+.classicfipmt .calendar-table {
+	font-family: "Open Sans", Arial, sans-serif;
+	font-size: 11px;
+	background-color: rgb(225,225,202);
+    color: #aaa;
+    border: 1px solid #adadad;
+}
+
+.classicfipmt .ranges li {
+	font-family: "Open Sans", Arial, sans-serif;
+	font-size: 11px;
+	background-color: rgb(225,225,202);
+    color: #000;
+    border: 1px solid #adadad;
+}
+
+.classicfipmt .ranges li.active {
+    background: #5a78a7;
+    border: 1px solid #5a78a7;
+    color: #fff;
+}
+
+.classicfipmt .daterangepicker .input-mini.active, 
+.classicfipmt .daterangepicker .input-mini {
+	font-family: "Open Sans", Arial, sans-serif;
+	font-size: 11px;
+	background-color: rgb(225,225,202);
+    color: #000;
+    border: 1px solid #adadad;
+}
+
+.classicfipmt .daterangepicker .table-condensed td {
+	font-family: "Open Sans", Arial, sans-serif;
+	font-size: 11px;
+	background-color: rgb(225,225,202);
+    color: #000;
+}
+
+.classicfipmt .daterangepicker td.start-date {
+    background-color: #5a78a7;
+    border-color: transparent;
+    color: #fff;
+}
+
+.classicfipmt .daterangepicker td.in-range {
+    background-color: #ebf4f8;
+    border-color: transparent;
+    color: #000;
+    border-radius: 0;
+}
+
+.classicfipmt .daterangepicker td.end-date {
+   background-color: #5a78a7;
+    border-color: transparent;
+    color: #fff;
+}
+
+
+.classicfipmt .daterangepicker td.off, .classicfipmt .daterangepicker td.off.in-range, 
+.classicfipmt .daterangepicker td.off.start-date, 
+.classicfipmt .daterangepicker td.off.end-date {
+    background-color: rgb(225,225,202);
+    color: #aaa;
+    border-color: transparent;
+}
+
+.classicfipmt .daterangepicker .calendar th{
+	  color: #000;
+	  font-size: 11px;
+}
+
+
+.modernlight .daterangepicker table {
+	color: #000;
+}
+
+.modernlight .calendar-table {
+	font-family: "Open Sans", Arial, sans-serif;
+	font-size: 14px;
+	background-color: #f1f1f1;
+   color: #000;
+    border: 1px solid #ddd;
+}
+
+.modernlight .daterangepicker {
+	font-family: "Open Sans", Arial, sans-serif;
+	font-size: 14px;
+	background-color: #fff;
+	color: #000;
+}
+
+.modernlight .ranges li {
+	font-family: "Open Sans", Arial, sans-serif;
+	font-size: 14px;
+	background-color: #f1f1f1;
+    color: #000;
+    border: 1px solid #ddd;
+}
+
+.modernlight .ranges li.active {
+    background: #5a78a7;
+    border: 1px solid #5a78a7;
+    color: #000;
+}
+
+.modernlight .daterangepicker .input-mini.active, 
+.modernlight .daterangepicker .input-mini {
+	font-family: "Open Sans", Arial, sans-serif;
+	font-size: 14px;
+	background-color: #f1f1f1;
+    color: #000;
+    border: 1px solid #ddd;
+}
+
+.modernlight .daterangepicker .table-condensed td {
+	font-family: "Open Sans", Arial, sans-serif;
+	font-size: 14px;
+	background-color: #f1f1f1;
+    color: #000;
+}
+
+.modernlight .daterangepicker td.start-date {
+    background-color: #5a78a7;
+    border-color: transparent;
+    color: #000;
+}
+
+.modernlight .daterangepicker td.in-range {
+    background-color: #ebf4f8;
+    border-color: transparent;
+    color: #000;
+    border-radius: 0;
+}
+
+.modernlight .daterangepicker td.end-date {
+   background-color: #5a78a7;
+    border-color: transparent;
+    color: #000;
+}
+
+
+.modernlight .daterangepicker td.off, .modernlight .daterangepicker td.off.in-range, 
+.modernlight .daterangepicker td.off.start-date, 
+.modernlight .daterangepicker td.off.end-date {
+    background-color: #f1f1f1;
+    color: #aaa;
+    border-color: transparent;
+}
+
+.modernlight .daterangepicker .calendar th{
+	  color: #000;
+}

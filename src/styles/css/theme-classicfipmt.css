@@ -1,0 +1,547 @@
+
+.classicfipmt {
+  line-height: 1;
+  font-family: "Tahoma", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #4d4d4d;
+  overflow-x: hidden;
+  background-color: #f0f0f0;
+  padding-bottom: 10px;
+}
+
+.classicfipmt .av-form-group{
+  height: 22px;
+}
+.classicfipmt .av-btn{
+  border-radius: 0;
+}
+.classicfipmt .av-btn-primary{
+  background-color: #3c5385;
+  color: #ffffff;
+}
+.classicfipmt .av-cancel-btn{
+  background-color: #c9302c;
+  border-radius: 0;
+  padding-right: 8px;
+  padding-left: 8px;
+}
+.classicfipmt .av-input{
+  border-radius: 0;
+}
+.classicfipmt .form-control {
+  height: 22px;
+  /* padding: 5px 10px; */
+  font-size: 12px;
+  border-radius: 0px;
+  /* line-height: 1.5; */
+}
+
+.classicfipmt .av-form-group .input-group{
+  width: 140px;
+  height: 22px;
+
+}
+.classicfipmt .av-form-group .input-group .input-group-addon {
+  padding: 0px 8px;
+  border-radius: 0px;
+}
+.classicfipmt .nav{
+  height: 28px;
+  font-size: 12px;
+}
+.classicfipmt .nav-tabs>li>a{
+  padding: 4px 8px;
+  border-radius: 2px;
+}
+.classicfipmt .negative-number{
+  color: red;
+  text-align: right;
+}
+.classicfipmt .positive-number{
+  text-align: right;
+}
+
+.classicfipmt img {
+  vertical-align: middle;
+  border: 0;
+}
+.classicfipmt .ag-root {
+  border: 1px solid #808080;
+}
+
+.classicfipmt .ag-cell-not-inline-editing {
+  padding: 2px;
+}
+.classicfipmt .ag-cell-range-selected-1:not(.ag-cell-focus) {
+  background-color: rgba(100,160,160,0.4);
+}
+.classicfipmt .ag-cell-range-selected-2:not(.ag-cell-focus) {
+  background-color: rgba(80,80,80,0.4);
+}
+.classicfipmt .ag-cell-range-selected-3:not(.ag-cell-focus) {
+  background-color: rgba(40,40,40,0.4);
+}
+.classicfipmt .ag-cell-range-selected-4:not(.ag-cell-focus) {
+  background-color: rgba(0,0,0,0.4);
+}
+.classicfipmt .ag-column-moving .ag-cell {
+  -webkit-transition: left 0.2s;
+  -moz-transition: left 0.2s;
+  -o-transition: left 0.2s;
+  -ms-transition: left 0.2s;
+  transition: left 0.2s;
+}
+.classicfipmt .ag-column-moving .ag-header-cell {
+  -webkit-transition: left 0.2s;
+  -moz-transition: left 0.2s;
+  -o-transition: left 0.2s;
+  -ms-transition: left 0.2s;
+  transition: left 0.2s;
+}
+.classicfipmt .ag-column-moving .ag-header-group-cell {
+  -webkit-transition: left 0.2s;
+  -moz-transition: left 0.2s;
+  -o-transition: left 0.2s;
+  -ms-transition: left 0.2s;
+  transition: left 0.2s;
+}
+.classicfipmt .ag-cell-focus {
+  border: 1px solid #a9a9a9;
+}
+.classicfipmt .ag-cell-no-focus {
+  border-right: 1px solid #808080;
+  border-bottom: 1px solid #808080;
+}
+.classicfipmt .ag-cell-first-right-pinned {
+  border-left: 1px solid #808080;
+}
+.classicfipmt .ag-cell-last-left-pinned {
+  border-right: 1px solid #808080;
+}
+.classicfipmt .ag-cell-highlight {
+  border: 1px solid #90ee90;
+}
+.classicfipmt .ag-cell-highlight-animation {
+  -webkit-transition: border 1s;
+  -moz-transition: border 1s;
+  -o-transition: border 1s;
+  -ms-transition: border 1s;
+  transition: border 1s;
+}
+.classicfipmt .ag-value-change-delta {
+  padding-right: 2px;
+}
+.classicfipmt .ag-value-change-delta-up {
+  color: #006400;
+}
+.classicfipmt .ag-value-change-delta-down {
+  color: #8b0000;
+}
+.classicfipmt .ag-value-change-value {
+  background-color: transparent;
+  -webkit-border-radius: 1px;
+  border-radius: 1px;
+  padding-left: 1px;
+  padding-right: 1px;
+  -webkit-transition: background-color 1s;
+  -moz-transition: background-color 1s;
+  -o-transition: background-color 1s;
+  -ms-transition: background-color 1s;
+  transition: background-color 1s;
+}
+.classicfipmt .ag-value-change-value-highlight {
+  background-color: #cec;
+  -webkit-transition: background-color 0.1s;
+  -moz-transition: background-color 0.1s;
+  -o-transition: background-color 0.1s;
+  -ms-transition: background-color 0.1s;
+  transition: background-color 0.1s;
+}
+.classicfipmt .ag-rich-select {
+  font-size: 14px;
+  border: 1px solid #808080;
+  background-color: #fff;
+}
+.classicfipmt .ag-rich-select-value {
+  padding: 2px;
+}
+.classicfipmt .ag-rich-select-list {
+  border-top: 1px solid #d3d3d3;
+}
+.classicfipmt .ag-rich-select-row {
+  padding: 2px;
+}
+.classicfipmt .ag-rich-select-row-selected {
+  background-color: #bde2e5;
+}
+.classicfipmt .ag-large-text {
+  border: 1px solid #808080;
+}
+.classicfipmt .ag-header {
+  color: #000;
+  background: rgb(240,240,240);
+  border-bottom: 1px solid #808080;
+  font-weight: bold;
+  padding: 0px;
+  text-align: center;
+  vertical-align: middle;
+  font-family: "Tahoma";
+  font-size: 11px;
+}
+.classicfipmt .ag-header-icon {
+  color: #000;
+  stroke: none;
+  fill: #000;
+}
+.classicfipmt .ag-no-scrolls .ag-header-container {
+  background: -webkit-linear-gradient(#fff, #d3d3d3);
+  background: -moz-linear-gradient(#fff, #d3d3d3);
+  background: -o-linear-gradient(#fff, #d3d3d3);
+  background: -ms-linear-gradient(#fff, #d3d3d3);
+  background: linear-gradient(#fff, #d3d3d3);
+  border-bottom: 1px solid #808080;
+}
+.classicfipmt .ag-header-cell {
+  border-right: 2px solid #808080;
+  border-top: 1px solid #808080;
+  border-bottom: 2px solid #808080;
+}
+.classicfipmt .ag-header-cell-moving .ag-header-cell-label {
+  opacity: 0.5;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+  filter: alpha(opacity=50);
+}
+.classicfipmt .ag-header-cell-moving {
+  background-color: #bebebe;
+}
+.classicfipmt .ag-header-group-cell {
+  border-right: 1px solid #808080;
+}
+.classicfipmt .ag-header-group-cell-with-group {
+  border-bottom: 1px solid #808080;
+}
+.classicfipmt .ag-header-cell-label {
+  padding: 10px 6px 0px 5px;
+}
+.classicfipmt .ag-header-cell-text {
+  padding-left: 2px;
+}
+.classicfipmt .ag-header-group-cell-label {
+  padding: 4px;
+  padding-left: 10px;
+}
+.classicfipmt .ag-header-group-text {
+  margin-right: 2px;
+}
+.classicfipmt .ag-header-cell-menu-button {
+  padding: 2px;
+  margin-top: 4px;
+  border: 1px solid transparent;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  -webkit-box-sizing: content-box /* When using bootstrap, box-sizing was set to 'border-box' */;
+  -moz-box-sizing: content-box /* When using bootstrap, box-sizing was set to 'border-box' */;
+  box-sizing: content-box /* When using bootstrap, box-sizing was set to 'border-box' */;
+  line-height: 0px /* normal line height, a space was appearing below the menu button */;
+}
+.classicfipmt .ag-pinned-right-header {
+  border-left: 1px solid #808080;
+}
+.classicfipmt .ag-header-cell-menu-button:hover {
+  border: 1px solid #808080;
+}
+.classicfipmt .ag-body {
+  background-color: #f6f6f6;
+}
+.classicfipmt .ag-row {
+  -webkit-transition: background-color 0.1s;
+  -moz-transition: background-color 0.1s;
+  -o-transition: background-color 0.1s;
+  -ms-transition: background-color 0.1s;
+  transition: background-color 0.1s;
+}
+.classicfipmt .ag-row-odd {
+  background-color: rgb(225,225,202);
+}
+.classicfipmt .ag-row-even {
+  background-color: rgb(245,245,220);
+}
+.classicfipmt .ag-row-selected {
+  background-color: rgb(51,152,255);
+  color: #FFFFFF;
+}
+.classicfipmt .ag-floating-top .ag-row {
+  background-color: #f0f0f0;
+}
+.classicfipmt .ag-floating-bottom .ag-row {
+  background-color: #f0f0f0;
+}
+.classicfipmt .ag-overlay-loading-wrapper {
+  background-color: rgba(255,255,255,0.5);
+}
+.classicfipmt .ag-overlay-loading-center {
+  background-color: #fff;
+  border: 1px solid #808080;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  padding: 10px;
+  color: #000;
+}
+.classicfipmt .ag-overlay-no-rows-center {
+  background-color: #fff;
+  border: 1px solid #808080;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  padding: 10px;
+}
+.classicfipmt .ag-group-cell-entire-row {
+  background-color: #f6f6f6;
+  padding: 2px;
+}
+.classicfipmt .ag-footer-cell-entire-row {
+  background-color: #f6f6f6;
+  padding: 2px;
+}
+.classicfipmt .ag-group-cell {
+  font-style: italic;
+}
+.classicfipmt .ag-group-expanded {
+  padding-right: 4px;
+}
+.classicfipmt .ag-group-contracted {
+  padding-right: 4px;
+}
+.classicfipmt .ag-group-value {
+  padding-right: 2px;
+}
+.classicfipmt .ag-group-checkbox {
+  padding-right: 2px;
+}
+.classicfipmt .ag-footer-cell {
+  font-style: italic;
+}
+.classicfipmt .ag-menu {
+  border: 1px solid #808080;
+  background-color: #f6f6f6;
+  cursor: default;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+}
+.classicfipmt .ag-menu .ag-tab-header {
+  background-color: #e6e6e6;
+}
+.classicfipmt .ag-menu .ag-tab {
+  padding: 6px 8px 6px 8px;
+  margin: 2px 2px 0px 2px;
+  display: inline-block;
+  border-right: 1px solid transparent;
+  border-left: 1px solid transparent;
+  border-top: 1px solid transparent;
+  border-top-right-radius: 2px;
+  border-top-left-radius: 2px;
+}
+.classicfipmt .ag-menu .ag-tab-selected {
+  background-color: #f6f6f6;
+  border-right: 1px solid #d3d3d3;
+  border-left: 1px solid #d3d3d3;
+  border-top: 1px solid #d3d3d3;
+}
+.classicfipmt .ag-menu-separator {
+  border-top: 1px solid #d3d3d3;
+}
+.classicfipmt .ag-menu-option-active {
+  background-color: #bde2e5;
+}
+.classicfipmt .ag-menu-option-icon {
+  padding: 2px 4px 2px 4px;
+  vertical-align: middle;
+}
+.classicfipmt .ag-menu-option-text {
+  padding: 2px 4px 2px 4px;
+  vertical-align: middle;
+}
+.classicfipmt .ag-menu-option-shortcut {
+  padding: 2px 2px 2px 20px;
+  vertical-align: middle;
+}
+.classicfipmt .ag-menu-option-popup-pointer {
+  padding: 2px 4px 2px 4px;
+  vertical-align: middle;
+}
+.classicfipmt .ag-menu-option-disabled {
+  opacity: 0.5;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+  filter: alpha(opacity=50);
+}
+.classicfipmt .ag-menu-column-select-wrapper {
+  margin: 2px;
+}
+.classicfipmt .ag-filter-checkbox {
+  position: relative;
+  top: 2px;
+  left: 2px;
+}
+.classicfipmt .ag-filter-header-container {
+  border-bottom: 1px solid #d3d3d3;
+}
+.classicfipmt .ag-filter-apply-panel {
+  border-top: 1px solid #d3d3d3;
+  padding: 2px;
+}
+.classicfipmt .ag-filter-value {
+  margin-left: 4px;
+}
+.classicfipmt .ag-selection-checkbox {
+  padding-right: 4px;
+}
+.classicfipmt .ag-paging-panel {
+  padding: 4px;
+}
+.classicfipmt .ag-paging-button {
+  margin-left: 4px;
+  margin-right: 4px;
+}
+.classicfipmt .ag-paging-row-summary-panel {
+  display: inline-block;
+  width: 300px;
+}
+.classicfipmt .ag-tool-panel {
+  background-color: #f6f6f6;
+  border-right: 1px solid #808080;
+  border-bottom: 1px solid #808080;
+  border-top: 1px solid #808080;
+  color: #222;
+}
+.classicfipmt .ag-status-bar {
+  color: #222;
+  background-color: #f6f6f6;
+  font-size: 14px;
+  height: 22px;
+  border-bottom: 1px solid #808080;
+  border-left: 1px solid #808080;
+  border-right: 1px solid #808080;
+  padding: 2px;
+}
+.classicfipmt .ag-status-bar-aggregations {
+  float: right;
+}
+.classicfipmt .ag-status-bar-item {
+  padding-left: 10px;
+}
+.classicfipmt .ag-column-drop-cell {
+  background: -webkit-linear-gradient(#fff, #d3d3d3);
+  background: -moz-linear-gradient(#fff, #d3d3d3);
+  background: -o-linear-gradient(#fff, #d3d3d3);
+  background: -ms-linear-gradient(#fff, #d3d3d3);
+  background: linear-gradient(#fff, #d3d3d3);
+  color: #000;
+  border: 1px solid #808080;
+}
+.classicfipmt .ag-column-drop-cell-ghost {
+  opacity: 0.5;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+  filter: alpha(opacity=50);
+}
+.classicfipmt .ag-column-drop-cell-text {
+  padding-left: 2px;
+  padding-right: 2px;
+}
+.classicfipmt .ag-column-drop-cell-button {
+  border: 1px solid transparent;
+  padding-left: 2px;
+  padding-right: 2px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+}
+.classicfipmt .ag-column-drop-cell-button:hover {
+  border: 1px solid #808080;
+}
+.classicfipmt .ag-column-drop-empty-message {
+  padding-left: 2px;
+  padding-right: 2px;
+  color: #808080;
+}
+.classicfipmt .ag-column-drop-icon {
+  padding-right: 4px;
+}
+.classicfipmt .ag-column-drop {
+  background-color: #f6f6f6;
+}
+.classicfipmt .ag-column-drop-horizontal {
+  padding: 4px 4px 4px 4px;
+  border-top: 1px solid #808080;
+  border-left: 1px solid #808080;
+  border-right: 1px solid #808080;
+}
+.classicfipmt .ag-column-drop-horizontal .ag-column-drop-cell {
+  padding: 2px;
+}
+.classicfipmt .ag-column-drop-vertical {
+  padding: 4px 4px 10px 4px;
+  border-bottom: 1px solid #808080;
+}
+.classicfipmt .ag-column-drop-vertical .ag-column-drop-cell {
+  margin-top: 2px;
+}
+.classicfipmt .ag-column-drop-vertical .ag-column-drop-empty-message {
+  text-align: center;
+  padding: 5px;
+}
+.classicfipmt .ag-pivot-mode {
+  border-bottom: 1px solid #808080;
+  padding: 4px;
+  background-color: #f6f6f6;
+}
+.classicfipmt .ag-tool-panel .ag-column-select-panel {
+  border-bottom: 1px solid #808080;
+}
+.classicfipmt .ag-select-agg-func-popup {
+  cursor: default;
+  position: absolute;
+  font-size: 14px;
+  background-color: #fff;
+  border: 1px solid #808080;
+}
+.classicfipmt .ag-select-agg-func-item {
+  padding-left: 2px;
+  padding-right: 2px;
+}
+.classicfipmt .ag-select-agg-func-item:hover {
+  background-color: #bde2e5;
+}
+
+.ag-row-selected input {
+    color: black;
+}
+
+.classicfipmt .ag-cell {
+    padding-top: 2px !important;
+    padding-bottom: 2px !important;
+    font-size: 11px;
+}
+
+.classicfipmt .agHeaderCellLabel input {
+  margin-top: 4px;
+}
+.classicfipmt .ag-cell-not-inline-editing input[type="text"] {
+    margin-top: -2px;
+    margin-left: -2px;
+    border-right: 2px;
+
+}
+
+.classicfipmt .ag-cell-not-inline-editing input[type="checkbox"] {
+    margin-top: 0px;
+}
+.classicfipmt .search-results-grid{
+  color: #333;
+}
+.classicfipmt .ag-row-selected input{
+  height:24px;
+}
+.classicfipmt .editable-field,
+.classicfipmt .etched-border .ag-cell-edit-input,
+.classicfipmt .etched-border input {
+  background-color : lightgoldenrodyellow;
+  width : 100%;
+  height : 100%;
+}
