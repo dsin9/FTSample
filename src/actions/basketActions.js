@@ -242,23 +242,38 @@ export const fetchPreferences = () => {
   };
 };
 
-export const applyFilter = (filteredBasket,filter) => {
-  console.log("APPLY_FILTER",filteredBasket);
-  console.log("FILTER",filter);
+export const applyFilter = (items,filter) => {
+  let filtered = [...items];
+      delete filtered.filter;
+      delete filtered.filteredBasket;
+      delete filtered.filterCount;
+      if(filter && filter.side){
+        filtered =  filtered.filter(item => item.side == filter.side  || item.side2 == filter.side)
+      }
+      if(filter && filter.security){
+        filtered = filtered.filter(item => item.symbol == filter.security || item.symbol2 == filter.security)
+      }
+
    return {
     type: actionTypes.APPLY_FILTER,
-    filteredBasket : filteredBasket.filter(item => item.side == filter.side  || item.side2 == filter.side 
-      ||item.symbol == filter.security || item.symbol2 == filter.security),
+    filteredBasket : filtered,
     filter : filter
   }
 };
 
-export const updateCount = (filteredBasket,filter) => {
+export const updateCount = (items,filter) => {
+  let filtered = [...items];
+  delete filtered.filter;
+  delete filtered.filteredBasket;
+  delete filtered.filterCount;
+  if(filter && filter.security){
+    filtered = filtered.filter(item => item.symbol == filter.security || item.symbol2 == filter.security)
+  }
   return {
    type: actionTypes.UPDATE_COUNT,
    filterCount : {
-        buy : (filteredBasket.filter(item => item.side == 'Buy')).length,
-        sell :(filteredBasket.filter(item => item.side == 'Sell')).length
+        buy : (filtered.filter(item => item.side == 'Buy' || item.side2 == 'Buy')).length,
+        sell :(filtered.filter(item => item.side == 'Sell' || item.side2 == 'Sell')).length
    }
  }
 };

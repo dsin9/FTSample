@@ -8,7 +8,7 @@ const BasketListItem = ({ basket }) => {
     return (<h3>Loading...</h3>)
   }
   return (
-    <li className="list-group-item  col-xs-12" style={{ width: '90%', marginLeft: '11px', marginBottom: '8px', borderLeftStyle: 'solid', borderLeftWidth: (basket.complianceStatus) ? '10px' : '0px', borderLeftColor: basket.complianceStatus }}>
+    <li className="list-group-item  col-xs-12" style={{ width: '90%', marginLeft: '12px', marginBottom: '8px', borderLeftStyle: 'solid', borderLeftWidth: (basket.complianceStatus) ? '10px' : '0px', borderLeftColor: basket.complianceStatus }}>
       <div className="basket-list media" style={{ marginLeft: '-12px' }}>
         <div className="media-body">
           <div className="col-xs-6">

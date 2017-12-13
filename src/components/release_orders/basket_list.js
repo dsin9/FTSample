@@ -18,13 +18,6 @@ class BasketList extends Component {
     window.previousLocation = this.props.location;
   }
 
-<<<<<<< HEAD
-  selectGrid(e) {
-    console.log(e.target)
-  }
-
-=======
->>>>>>> 26b92826ed5a929320daaad4f0042f92b1226908
   render() {
     const { label, goBack } = this.props;
     console.log('goBack:'+goBack)
@@ -35,10 +28,6 @@ class BasketList extends Component {
             <BasketListItem
               key={v.id}
               basket={v}
-<<<<<<< HEAD
-              onClick={this.selectGrid}
-=======
->>>>>>> 26b92826ed5a929320daaad4f0042f92b1226908
             />
           )
         })

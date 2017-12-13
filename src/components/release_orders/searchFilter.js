@@ -27,18 +27,8 @@ class SearchFilter extends Component {
       this.items = this.props.submissions;
     }
     this.filterCount = {
-      buy : (this.props.filteredBasket.filter(item => item.side == 'Buy')).length,
-      sell :(this.props.filteredBasket.filter(item => item.side == 'Sell')).length
-    }
-  }
-
-  componentDidMount() {
-    
-    if(this.props.filterCount){
-       this.filterCount =  this.props.filterCount;
-    }
-    if(this.props.filter){
-      this.filter = this.props.filter;
+      buy : (this.props.filteredBasket.filter(item => {item.side == 'Buy'|| item.side2=='Buy'})).length,
+      sell:(this.props.filteredBasket.filter(item => {item.side == 'Sell'|| item.side2=='Sell'})).length
     }
   }
 
@@ -46,14 +36,16 @@ class SearchFilter extends Component {
      let security = this.props.filter && this.props.filter.security ? this.props.filter.security : '';
      let filter={side : side,security:security,timeframe:'ALL'};
      this.filter = filter;
-     this.items = this.items.filteredBasket ? this.items.filteredBasket : this.items
+  
      this.props.applyFilter(this.items,filter);
+     this.props.updateCount(this.items,filter);
    }
 
-
+   componentDidMount(){
+      this.props.updateCount(this.items,this.props.filter);
+   }
   componentWillReceiveProps(nextProps) {
     if (nextProps.location !== this.props.location) {
-      // console.log('histoprevPathry::' + JSON.stringify(this.props.location))
     }
   }
 
@@ -62,24 +54,30 @@ class SearchFilter extends Component {
 
   render() {
     const { match, location, history } = this.props;
+    if(this.props.filterCount){
+      this.filterCount =  this.props.filterCount;
+   }
+   if(this.props.filter){
+     this.filter = this.props.filter;
+   }
     console.log("PROPS",this.props);
     return (
       <div>
         <div>
           <div className="col-xs-12" style={{ marginBottom: '5px', marginLeft: '10px' }}>
-            <div onClick={() => this.filterBySide('Buy')} className={this.filter && this.filter.side == 'Buy' ? 'activeFilter btn col-xs-6' : 'inactiveFilter btn col-xs-6'} style={{ lineHeight: '50px', width: '190px', textAlign: 'center' }}>
-              <label >Buy <span className="badge filterBadge">{this.filterCount.buy}</span></label>
+            <div onClick={() => this.filterBySide('Buy')} className={this.filter && this.filter.side == 'Buy' ? 'activeFilter btn col-xs-6' : 'inactiveFilter btn col-xs-6'} style={{ lineHeight: '50px', width: '190px', textAlign: 'center',fontSize:'20px' }}>
+              <label style={{fontWeight:'normal'}}>Buy <span className="badge filterBadge">{this.filterCount.buy}</span></label>
             </div>
-            <div onClick={() => this.filterBySide('Sell')} className= {this.filter && this.filter.side =='Sell' ? 'activeFilter btn col-xs-6' : ' inactiveFilter btn col-xs-6'} style={{lineHeight: '50px', width: '190px', textAlign: 'center' }}>
-              <label >Sell <span className="badge filterBadge">{this.filterCount.sell}</span></label>
+            <div onClick={() => this.filterBySide('Sell')} className= {this.filter && this.filter.side =='Sell' ? 'activeFilter btn col-xs-6' : ' inactiveFilter btn col-xs-6'} style={{lineHeight: '50px', width: '190px', textAlign: 'center',fontSize:'20px' }}>
+              <label style={{fontWeight:'normal'}}>Sell <span className="badge filterBadge">{this.filterCount.sell}</span></label>
             </div>
           </div>
           <div className="col-xs-12" style={{ marginBottom: '5px', marginLeft: '10px' }}>
-            <div className='inactiveFilter btn col-xs-6' style={{ lineHeight: '50px', width: '190px', textAlign: 'center' }}>
-              <label><Link to="/securitiesSearch" style={{color:'#333'}}>{this.filter && this.filter.security ? this.props.security : 'Security'}</Link></label>
+            <div onClick={()=>history.push('/securitiesSearch')} className={this.filter && this.filter.security ? 'activeFilter btn col-xs-6' : 'inactiveFilter btn col-xs-6'} style={{ lineHeight: '50px', width: '188px', textAlign: 'center',marginRight:'2px',fontSize:'20px' }}>
+              <label style={{fontWeight:'normal'}}>{this.filter && this.filter.security ? this.filter.security : 'Security'}</label>
             </div>
-            <div className='inactiveFilter btn col-xs-6' style={{ lineHeight: '50px', width: '190px', textAlign: 'center' }}>
-              <label >Timeframe-All</label>
+            <div className='inactiveFilter btn col-xs-6' style={{ lineHeight: '50px', width: '188px', textAlign: 'center',marginLeft:'2px',fontSize:'20px' }}>
+              <label style={{fontWeight:'normal'}}>Timeframe-All</label>
             </div>
           </div>
         </div>
@@ -120,7 +118,8 @@ const mapStateToProps = (state, ownProps) => {
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    applyFilter: (filteredBasket,filter) => dispatch(basketActions.applyFilter(filteredBasket,filter))
+    applyFilter: (filteredBasket,filter) => dispatch(basketActions.applyFilter(filteredBasket,filter)),
+    updateCount : (filteredBasket,filter) => dispatch(basketActions.updateCount(filteredBasket,filter))  
   }
 };
 

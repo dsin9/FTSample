@@ -40,7 +40,8 @@ class SecuritySearch extends Component {
   selectSecurity(symbol){
       let filter = this.props.filter || {};
       filter.security = symbol;
-      this.props.applyFilter(this.props.filteredBasket,filter);
+      this.props.applyFilter(this.items,filter);
+      this.props.updateCount(this.items,filter);
       this.props.history.push('/app/filter'); 
   }
   componentDidMount() {
@@ -59,9 +60,7 @@ class SecuritySearch extends Component {
       return (
         <div className="container-fluid" style={{ marginLeft: '-10px', marginRight: '-35px' }}>
         <div className="row">
-            <div className="navbar-header col-xs-12">
-                <header>
-                <div className="row" style={{ marginBottom: '10px' }}>
+            <header>
                 <div className="col-xs-12">
                     <div className="bs-component">
                         <nav className="navbar navbar-ilp">
@@ -69,34 +68,31 @@ class SecuritySearch extends Component {
                                 <div className="navbar-header">
                                     <a href="#" className="navbar-brand">
                                         <i style={{fontSize: '17px' }}></i>
-                                          Select a security
+                                        Select a security
                                     </a>
-                                    <Link to="/app/filter" href="#" className="navbar-brand" >
-                                        <i style={{fontSize: '17px' }}></i>
-                                        CLOSE
-                                    </Link>
+                                    
+                                <Link to="/app/filter" style={{float: 'right',marginRight: '20px',marginTop: '7px'}}>
+                                <button type="button" className="btn btn-sm" style={{backgroundColor: 'black',color:'#fff',fontSize:'17px'}}>
+                                    <span className="glyphicon glyphicon-remove" aria-hidden="true"></span>
+                                </button></Link>
                                 </div>
                             </div>
                         </nav>
                     </div>
                 </div>
-            </div>
-                </header>
-            </div>
-            <main className="main-section">
-            <div className="col-xs-12">
+            </header>
+            <div className="col-xs-12" style={{backgroundColor:'white',height:'40px'}}>
                 <SearchInput className="search-input col-xs-12" onChange={this.searchUpdated} />
             </div>
-            </main>
         </div>
         <div className="row">
-                <li className="list-group-item  col-xs-12" style={{ width: '90%', marginLeft: '11px', marginBottom: '8px', borderLeftStyle: 'solid'}}>
+                <li className="list-group-item  col-xs-12" style={{position:'relative',display:'block',padding:'10px 15px',border:'none',background:'none'}}>
                     
                     {filteredSecurities.map(security => {
                     return (
                         <div className="col-xs-12 securitySearchDiv" key={security.symbol} onClick={()=>this.selectSecurity(security.symbol)}>
                             <img className='col-xs-4' src={svgs("./" + security.flag.toLowerCase() + ".svg")}/>
-                            <div className="col-xs-8" style={{display:'inline-block' }}>{security.symbol}</div>    
+                            <div className="col-xs-8" style={{display:'inline-block',marginTop:'3px' }}>{security.symbol}</div>    
                         </div>
                         )
                     })}
@@ -121,8 +117,9 @@ const mapStateToProps = (state, ownProps) => {
 const mapDispatchToProps = (dispatch) => {
   return {
     fetchSecurities: (items) => dispatch(securityActions.fetchSecurities(items)),
-    applyFilter: (filteredBasket,filter) => dispatch(basketActions.applyFilter(filteredBasket,filter))
-  };
+    applyFilter: (filteredBasket,filter) => dispatch(basketActions.applyFilter(filteredBasket,filter)),
+    updateCount : (filteredBasket,filter) => dispatch(basketActions.updateCount(filteredBasket,filter))    
+    };
 };
 
 export default withRouter(connect(mapStateToProps, mapDispatchToProps)(SecuritySearch));

@@ -17,7 +17,8 @@ export default (props) => (
       <Route path='/securitiesSearch' exact component={SecuritySearch} />
         <App >
             <Switch>
-              <Route exact path='/app' component={FtrLanding} />
+            <Route exact path='/' component={BasketList} />
+              <Route exact path='/app' component={BasketList} />
               <Route path='/app/releaseOrder' exact component={BasketList} />
               <Route path='/app/trackSubmission' exact component={SubmissionsList} />
               <Route path='/app/filter' component={SearchFilter} />

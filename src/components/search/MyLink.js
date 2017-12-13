@@ -14,7 +14,18 @@ class MyLink extends Component {
         console.log("In constructor ",props.linktext)
     }
  componentDidMount(){
-  
+ 
+ }
+ componentWillMount(){
+     if(this.props.route == '/app/releaseOrder'
+                || this.props.route == '/'
+                || this.props.route == '/app'
+                || this.props.route == '/app/filter'){
+         this.props.appAction('Release Orders');
+     }
+     if(this.props.route == '/app/trackSubmission'){
+        this.props.appAction('Track Submissions');
+    }
  }
 
 componentWillReceiveProps(){
