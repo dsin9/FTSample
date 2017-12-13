@@ -1,22 +1,47 @@
-import React from "react";
-import SubmissionsListItem from "./basket_list_item";
+import React, { Component } from "react";
+import PropTypes from 'prop-types';
+import SubmissionsListItem from "./submissions_list_item";
+import { connect } from 'react-redux';
+import * as basketActions from '../../actions/basketActions';
 
-const SubmissionsList = props => {
-  const submissionItems = props.baskets.map(basket => {
+class SubmissionsList extends Component {
+
+  constructor(props, context) {
+    super(props, context);
+  }
+
+  componentDidMount() {
+    this.props.fetchSubmissions();
+  }
+
+
+  render() {
     return (
-      <SubmissionsListItem
-        trackSubmissions={props.trackSubmissions}
-        key={basket.id}
-        basket={basket}
-      />
+      <ul className="col-md-8 list-group">
+        {this.props.submissions.map((v, i) => {
+          return (
+            <SubmissionsListItem
+              key={v.id}
+              submission={v}
+            />
+          )
+        })
+        }
+      </ul>
     );
-  });
+  }
+}
 
-  return (
-    <ul className="col-md-8 list-group">
-      {submissionItems}
-    </ul>
-  );
+const mapStateToProps = (state, ownProps) => {
+  return {
+    submissions: state.submissions
+  };
 };
 
-export default SubmissionsList;
+const mapDispatchToProps = (dispatch) => {
+  return {
+    fetchSubmissions: () => dispatch(basketActions.fetchSubmissions())
+  };
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(SubmissionsList);

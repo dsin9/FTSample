@@ -1,13 +1,32 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
+import { withRouter } from 'react-router';
+import { connect } from 'react-redux';
 
 class Header extends Component {
+
+    static propTypes = {
+        match: PropTypes.object.isRequired,
+        location: PropTypes.object.isRequired,
+        history: PropTypes.object.isRequired
+    }
+
     render() {
+        const { match, location, history } = this.props;
         return (
-            <div className="wmc-page-header-dark col-xs-12">
-                <div className="container-fluid">
-                    <div className="row" style={{paddingTop: '12px'}}>
-						<i className="fa fa-bars" style={{marginRight: '12px', marginLeft: '12px'}} aria-hidden="true"></i>
-						<span>FTR - Release Orders</span>
+            <div className="row" style={{ marginBottom: '10px' }}>
+                <div className="col-xs-12">
+                    <div className="bs-component">
+                        <nav className="navbar navbar-ilp">
+                            <div className="container-fluid" style={{ marginLeft: '15px' }}>
+                                <div className="navbar-header">
+                                    <a href="#" className="navbar-brand">
+                                        <i className="navbar-brand fa fa-bars" style={{fontSize: '17px' }}></i>
+                                        {this.props.linktext}
+                                    </a>
+                                </div>
+                            </div>
+                        </nav>
                     </div>
                 </div>
             </div>
@@ -15,4 +34,19 @@ class Header extends Component {
     }
 }
 
-export default Header;
+
+const mapStateToProps = (state, ownProps) => {
+    debugger;
+    return {
+        linktext : state.linktext
+                
+    };
+  };
+  
+  const mapDispatchToProps = (dispatch) => {
+    return {
+     
+    }
+  };
+  
+  export default withRouter(connect(mapStateToProps, mapDispatchToProps)(Header));

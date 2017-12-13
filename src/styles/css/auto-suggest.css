@@ -1,0 +1,521 @@
+
+
+.react-autosuggest__container {
+  position: relative;
+}
+
+.react-autosuggest__input {
+  width: 100%;
+  height: 25px;
+  padding: 10px 12px;
+  font-family: Helvetica, sans-serif;
+  border: 1px solid #ccc;
+}
+
+.react-autosuggest__input:focus {
+  outline: none;
+}
+
+.react-autosuggest__container--open .react-autosuggest__input {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.react-autosuggest__suggestions-container {
+  display: none;
+}
+
+
+.react-autosuggest__container--open .react-autosuggest__suggestions-container {
+  display: block;
+  position: absolute;
+  top: 34px;
+  width: 719px;
+  height: 265px;
+  max-height: 265px;
+  overflow-y: scroll;
+  background-color: #fff;
+  font-size: 12px;
+  border: 1px solid gray;
+  z-index: 2;
+}
+
+.react-autosuggest__suggestions-list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.react-autosuggest__suggestion {
+  cursor: pointer;
+  border-radius: 0;
+}
+
+.sec-as-header {
+  margin-left: 0px;
+  margin-right: 0px;
+  margin-bottom: 10px;
+  cursor: auto;
+  background: -webkit-linear-gradient(#fff, #d3d3d3);
+  background: -moz-linear-gradient(#fff, #d3d3d3);
+  background: -o-linear-gradient(#fff, #d3d3d3);
+  background: -ms-linear-gradient(#fff, #d3d3d3);
+  background: linear-gradient(#fff, #d3d3d3);
+}
+
+.sec-as-row {
+  margin-left: 0px;
+  margin-right: 0px;
+  margin-bottom: 10px;
+}
+
+.sec-as-even-row {
+  background-color: #eaf3fc;
+}
+.sec-as-odd-row {
+  background-color: #ffffff;
+}
+.sec-as-row:hover {
+  background-color: rgba(97, 171, 255, .8);
+
+}
+.sec-as-header-div{
+  border-bottom: thin solid #808080;
+  border-right: thin solid #808080;
+  float: left;
+  height: 20px;
+  padding-top: 3px;
+  padding-left: 4px;
+}
+.sec-as-div {
+  float: left;
+  border-right: thin dotted #bbc0c5;
+  float: left;
+  height: 20px;
+  padding-top: 3px;
+  padding-left: 4px;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.react-autosuggest__suggestion--focused .sec-as-even-row {
+  background-color: #61abff;
+  color: #ffffff;
+}
+.react-autosuggest__suggestion--focused .sec-as-odd-row {
+  background-color: #61abff;
+  color: #ffffff;
+}
+.react-autosuggest__suggestion--highlighted .sec-as-even-row {
+    background-color: #61abff;
+    color: #ffffff;
+}
+.react-autosuggest__suggestion--highlighted .sec-as-odd-row {
+    background-color: #61abff;
+    color: #ffffff;
+}
+.my-modal-cl.modal-dialog{
+  width: 750px;
+}
+/*react- autosuggest css ends*/
+
+
+.smart-search-ellipsis {
+	padding-right : 8px !important;
+	padding-left : 8px !important;
+}
+
+
+.lookup-results > div {
+	z-index: 1000 !important;
+	overflow : visible !important;
+	position : fixed !important;
+}
+
+.advanced-search-row{
+	margin-bottom : 3px;
+}
+
+.search-results-grid {
+    position : absolute !important;
+    margin: 0;
+    padding: 0;
+    height: 400px !important;
+    width: 500px !important;
+    min-height : 250px !important;
+    min-width : 250px !important;
+    //display : flex !important;
+    
+ }
+ 
+.ag-fresh .form-control {
+  height: 24px;
+  /* padding: 5px 10px; */
+  font-size: 12px;
+  border-radius: 0px;
+  /* line-height: 1.5; */;
+  height : 24px;
+  padding : 0px;
+}
+
+.ag-fresh .av-form-group .input-group{
+  width: 140px;
+  height: 22px;
+
+}
+
+.ag-fresh .av-form-group .input-group .input-group-addon {
+  padding: 0px 8px;
+  border-radius: 0px;
+}
+
+.align-right{
+    float: right;
+}
+
+.bootstrap-primary{
+    color : #337ab7;
+}
+
+.container-style {
+    margin: 0;
+    padding: 0;
+}
+
+.form-style {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+.react-dual-listbox {
+  height: 300px;
+}
+
+.activeHeaderLink{
+  color: white;
+  font-size: 14px;
+}
+.headerLink{
+  font-size: 14px;
+}
+.Select-control{
+  border-radius: 0px;
+}
+
+.Select-input > input{
+  padding: 0px 0 4px 0;
+}
+
+.group-expand-toggle{
+	padding-right : 10px !important;
+  	padding-left : 5px !important;
+}
+
+.modal-dialog .form-control,
+.modal-dialog .Select,
+.modal-dialog .control-label{
+	font-size : 12px;
+}
+
+.search-strategy-modal .control-label{
+    text-align : left;
+}
+
+.search-strategy-modal .modal-content{
+    width : 550px;
+}
+
+.number-celleditor-input{
+	border-width : 0;
+	height : 22;
+	padding-left : 8px;
+	padding-right : 8px;
+}
+
+
+#positionsGrid .ag-cell-not-inline-editing,
+.modal .ag-cell-not-inline-editing {
+  padding-top : 3px !important;
+  vertical-align : middle;
+}
+
+
+#positionsGrid .ag-row-selected,
+#positionsGrid .ag-row-selected .editable-field,
+.modal .ag-row-selected  {
+  background-color: #d9edf7;
+  color : #000;
+}
+
+#positionsGrid .pmworiginal .ag-row-selected,
+#positionsGrid .pmworiginal .ag-row-selected .editable-field,
+.modal .pmworiginal .ag-row-selected  {
+  background-color: lightsteelblue;
+}
+
+#positionsGrid .ag-row-selected .editable-field input,
+.modal .ag-row-selected .editable-field input{
+	background-color : lightgoldenrodyellow;
+	color : #333;
+	margin-top : -10px;
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1279px) {
+	.transaction-load{}
+
+
+	.transaction-date-range {
+	}
+}
+
+@media screen and (min-width: 1280px) and (max-width: 1365px) {
+	.transaction-load{}
+
+	.transaction-date-range {
+		margin-left : 40px;
+	}
+}
+
+@media screen and (min-width: 1366px) and (max-width: 1911px) {
+	.transaction-load{}
+
+	.transaction-date-range {
+		margin-left : 55px;
+	}
+}
+
+@media screen and (min-width: 1920px) {
+	.transaction-load{}
+
+	.transaction-date-range {
+		margin-left : 145px;
+	}
+}
+
+
+#strategyAllocations{
+    height : 395px !important;
+}
+
+#strategyAllocations #gridContainer{
+    height : 395px !important;
+}
+
+.center-align{
+	text-align: center;
+    display: inline-block;
+    width: 100%;
+    vertical-align: middle;
+    line-height: inherit;
+}
+
+.text-data{
+    text-align: left;
+    vertical-align: middle;
+    padding-top: 3px !important; 
+}
+
+
+.text-data input{
+    text-align: left;
+    vertical-align: middle;
+    padding-top: -3px !important; 
+}
+
+.numeric-data{
+    text-align: right;
+    vertical-align: middle;
+    padding-top: 3px !important;
+}
+
+.numeric-data input {
+    text-align: right !important;
+    margin-left : -4px;
+    padding-top : -3px !important;
+}
+
+
+.error-bar{
+    width : 7px;
+    background-color: #a94442;
+    display: inline-block;
+    height: 100%;
+    float : left;
+    margin-left : -3px;
+}
+
+.warning-bar{
+    width : 7px;
+    background-color: #f0ad4e;
+    display: inline-block;
+    height: 100%;
+    float : left;
+    margin-left : -3px;
+}
+
+.align-right{
+    float: right;
+}
+
+.bootstrap-primary{
+    color : #337ab7;
+}
+
+.allocation-reset-btn{
+	font-size:16px;
+	margin-right: 30px;
+	width : 38px;
+	height : 30px;
+	border-radius : 4px;	
+}
+
+.select-cell-editor {
+	width : 100%;
+	height : 100%;
+	border-radius : 3px;
+}
+
+
+
+.Select-menu-outer{
+	z-index : 10000 !important;
+}
+
+#cellEditorSelectInput + div{
+	z-index: 2147483647;
+}
+
+
+#cellEditorSelectInput+div  div{
+	padding : 2px 6px;
+	cursor : default;
+	font-size : 12px;
+}
+
+.lookup-results > div {
+	z-index: 2147483647 !important;
+	overflow : visible !important;
+	position : fixed !important;
+}
+
+.text-data input, .numeric-data input {
+	margin-top : -3px !important;
+}
+
+#positionsGrid input[type="text"]:enabled{
+	#background-color : lightgoldenrodyellow;
+	width : 100%;
+	height : 100%;
+}
+
+.tooltip-inner, .popover{
+ 	white-space:pre;
+    max-width:none;
+    text-align:center;
+}
+
+.custom-modal-dialog .modal-footer{
+	padding : 0px 15px 15px 15px !important;
+}
+
+.custom-modal-dialog .modal-header{
+	padding : 15px 15px 0px 15px !important;
+}
+
+.stt-modal{
+    width : 1180px !important;
+    height : 535px;
+}
+
+.custom-large-modal{
+    width : 1250px !important;
+    height : 535px;
+}
+
+.react-autosuggest__input{
+    height: 34px;
+}
+.scheme-autosuggest .react-autosuggest__container--open .react-autosuggest__suggestions-container {
+    top:36px;
+    border: 1px solid rgba(0,0,0,.15);
+    width: 100%;
+    font-size: 14px;
+    box-shadow: 0 6px 12px rgba(0,0,0,.175);
+    background-clip: padding-box;
+}
+
+.scheme-as-row {
+    padding-left: 8px;
+    margin-right: 0px;
+    margin-bottom: 10px;
+    height: 28px;
+}
+
+.scheme-as-even-row {
+    background-color: #fff;
+}
+.scheme-as-odd-row {
+    #background-color: #afdcff;
+    #color: #ffffff;
+    background-color: #fff;
+}
+.scheme-as-row:hover {
+    background-color: grey;
+}
+.scheme-as-div {
+    float: left;
+    float: left;
+    height: 20px;
+    padding-top: 3px;
+    padding-left: 4px;
+    white-space: nowrap;
+    overflow: hidden;
+}
+.react-autosuggest__suggestion--focused .scheme-as-even-row {
+    background-color: #61abff;
+    color: #ffffff;
+}
+.react-autosuggest__suggestion--focused .scheme-as-odd-row {
+    background-color: #61abff;
+    color: #ffffff;
+}
+
+.updated-item {
+	font-weight : bold;
+	font-size : large;
+	vertical-align: top;
+}
+.ag-cell {
+    font-size: 12px;
+}
+
+.stt-modal .ag-cell {
+    font-size: 11px;
+}
+
+.stt-modal .ag-header-cell-text{
+	font-size : 11px;
+}
+
+.stt-modal .ag-header-cell-label, .ag-cell-not-inline-editing{
+	padding-left : 4px;
+	padding-right:4px;
+}
+
+.stt-modal .form-control{
+	font-size : 11px;
+}
+
+.etched-border .ag-cell-edit-input,
+.etched-border input,
+.etched-border select {
+  background-color : lightgoldenrodyellow;
+  width : 100%;
+  height : 100%;
+}
+
+.etched-border {
+    border-style : inset !important;
+    border-width : 1.2px;
+    border-color : #a9a9a9;
+}

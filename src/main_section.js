@@ -6,62 +6,14 @@ class MainSection extends Component {
 
     constructor(props) {
         super(props);
-
-        const baskets = [
-            {
-                id: 2000,
-                side: "Buy",
-                flag: "Euro",
-	            symbol: "RXZ7",
-	            size: 0.2,
-	            measure: "CTD",
-	            complianceStatus: "yellow"
-            },
-            {
-                id: 2001,
-                side: "Buy",
-                flag: "Euro",
-	            symbol: "RXZ7",
-	            size: 0.2,
-	            measure: "CTD",
-	            complianceStatus: "yellow"
-            },
-            {
-                id: 2003,
-                side: "Buy",
-                flag: "Euro",
-	            symbol: "RXZ7",
-	            size: 0.2,
-	            measure: "CTD",
-	            complianceStatus: "yellow"
-            },
-            {
-                id: 2004,
-                side: "Buy",
-                flag: "Euro",
-	            symbol: "RXZ7",
-	            size: 0.2,
-	            measure: "CTD",
-	            complianceStatus: "yellow"
-            }
-        ];
-
-        this.state = {
-            baskets: baskets,
-            selectedBasket: baskets[0]
-        };
     }
 
     render() {
-        // const { activeTab, isLoading } = this.props;
-
         return (
-            <div>
+            <div className="col-xs-12">
                 <SearchBar />
-                <BasketList
-                    baskets={this.state.baskets}
-                />
             </div>
+
         );
     }
 }
