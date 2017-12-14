@@ -7,6 +7,7 @@ import BasketList from "./components/release_orders/basket_list";
 import SubmissionsList from "./components/release_orders/submissions_list";
 import SearchFilter from "./components/release_orders/searchFilter";
 import SecuritySearch from './components/release_orders/security_search';
+import TimeframeFilter from './components/release_orders/TimeframeFilter';
 import App from './App'
 import Main from './Main'
 
@@ -15,6 +16,7 @@ export default (props) => (
     <Main>
       <Switch>
       <Route path='/securitiesSearch' exact component={SecuritySearch} />
+      <Route path='/selectTimeframe' exact component={TimeframeFilter} />
         <App >
             <Switch>
             <Route exact path='/' component={BasketList} />

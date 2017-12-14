@@ -20,7 +20,6 @@ class SearchFilter extends Component {
   constructor(props) {
     super(props);
     this.filter = this.props.filter;
-    console.log("LINK TEXT : - ",this.props.linktext);
     if(this.props.linktext == 'Release Orders'){
       this.items  = this.props.baskets
     }else{
@@ -44,6 +43,7 @@ class SearchFilter extends Component {
    componentDidMount(){
       this.props.updateCount(this.items,this.props.filter);
    }
+  
   componentWillReceiveProps(nextProps) {
     if (nextProps.location !== this.props.location) {
     }
@@ -76,13 +76,14 @@ class SearchFilter extends Component {
             <div onClick={()=>history.push('/securitiesSearch')} className={this.filter && this.filter.security ? 'activeFilter btn col-xs-6' : 'inactiveFilter btn col-xs-6'} style={{ lineHeight: '50px', width: '188px', textAlign: 'center',marginRight:'2px',fontSize:'20px' }}>
               <label style={{fontWeight:'normal'}}>{this.filter && this.filter.security ? this.filter.security : 'Security'}</label>
             </div>
-            <div className='inactiveFilter btn col-xs-6' style={{ lineHeight: '50px', width: '188px', textAlign: 'center',marginLeft:'2px',fontSize:'20px' }}>
-              <label style={{fontWeight:'normal'}}>Timeframe-All</label>
+            <div onClick={()=>history.push('/selectTimeframe')} className='inactiveFilter btn col-xs-6' style={{ lineHeight: '50px', width: '188px', textAlign: 'center',marginLeft:'2px',fontSize:'20px' }}>
+              <label style={{fontWeight:'normal'}}>Timeframe-{this.filter.timeframe ? this.filter.timeframe : 'All'}</label>
             </div>
           </div>
         </div>
         <ul className="col-md-8 list-group">
-        {this.props.filteredBasket.map((v, i) => {
+        {
+          this.props.filteredBasket.map((v, i) => {
           return (
             this.props.linktext == 'Release Orders'  ?
             <BasketListItem

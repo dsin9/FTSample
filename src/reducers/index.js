@@ -5,6 +5,7 @@ import {submissionsReducer} from './submissionsReducers'
 import {preferencesReducer} from './preferencesReducers'
 import {searchBarReducer} from './searchBarReducer'
 import {securityReducer} from './securityReducer'
+import {timeframeReducer} from './timeframeReducer'
 // import cart from './cartReducers';
 
 export default combineReducers({
@@ -12,7 +13,8 @@ export default combineReducers({
   submissions: submissionsReducer,
   preferences: preferencesReducer,
   linktext : searchBarReducer,
-  securities : securityReducer
+  securities : securityReducer,
+  timeframes : timeframeReducer
   // basket: basketReducer
   // cart
 });

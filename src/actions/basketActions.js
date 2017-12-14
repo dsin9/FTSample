@@ -103,7 +103,7 @@ export const fetchSubmissions = () => {
             "age": 1,
             "traderInitial": "CYX",
             "traderPhone": "(617)-123-3456",
-            "submissionTimestamp": "2017-04-23T18:25:43.511Z"
+            "submissionTimestamp": "2017-12-13T18:25:43.511Z"
           },
           {
             "id": 1001,
@@ -118,7 +118,7 @@ export const fetchSubmissions = () => {
             "age": 1,
             "traderInitial": "CYX",
             "traderPhone": "(617)-123-3456",
-            "submissionTimestamp": "2017-04-23T18:25:43.511Z"
+            "submissionTimestamp": "2017-12-14T18:25:43.511Z"
           },
           {
             "id": 1002,
@@ -253,13 +253,84 @@ export const applyFilter = (items,filter) => {
       if(filter && filter.security){
         filtered = filtered.filter(item => item.symbol == filter.security || item.symbol2 == filter.security)
       }
-
+     
+       // filtered = filterByTimeframe(filtered,filter.timeframe);
+      
    return {
     type: actionTypes.APPLY_FILTER,
     filteredBasket : filtered,
     filter : filter
   }
 };
+
+/* function filterByTimeframe(items,timeframe){
+     switch(timeframe){
+        case '1d':
+          return isUnderTimeframe(items,1);
+        case '5d':
+          return isUnderTimeframe(items,5);
+        case '10d':
+          return isUnderTimeframe(items,10);
+        case 'Last 30d':
+          return isUnderTimeframe(items,30);
+        case 'Last 90d':
+          return isUnderTimeframe(items,90);
+        case 'Last MTD':
+          return isUnderTimeframe(items,getNoOfDays('MTD'));
+        case 'Last QTD':
+          return isUnderTimeframe(items,getNoOfDays('QTD'));
+        case 'Last YTD':
+          return isUnderTimeframe(items,getNoOfDays('YTD'));
+        default : 
+          return items;
+
+    } 
+  
+
+}
+
+function getNoOfDays(input){
+    switch(input){
+      case 'MTD':
+        var now = new Date();
+        var quarter = Math.floor((now.getMonth() / 3));
+        var firstDate = new Date(now.getFullYear(), quarter * 3, 1);
+    
+    }
+}
+
+
+function days_between(date1, date2) {
+  
+      // The number of milliseconds in one day
+      var ONE_DAY = 1000 * 60 * 60 * 24
+  
+      // Convert both dates to milliseconds
+      var date1_ms = date1.getTime()
+      var date2_ms = date2.getTime()
+  
+      // Calculate the difference in milliseconds
+      var difference_ms = Math.abs(date1_ms - date2_ms)
+  
+      // Convert back to days and return
+      return Math.round(difference_ms/ONE_DAY)
+  
+  }
+
+function isUnderTimeframe(items,noOfDays){
+  let filteredItems = [];
+  for(let i=0;i<items.length;i++){
+    let item = items[i];
+    let currDate = new Date();
+    let timestamp = new Date(item.stageTimestamp || item.submissionTimestamp);
+    var priorDate = new Date().setDate(currDate.getDate()-noOfDays);
+    if(timestamp.getTime()<=currDate.getTime() && timestamp.getTime()>=priorDate){
+      filteredItems.push(item);
+    }
+  }
+  return filteredItems;
+} */
+
 
 export const updateCount = (items,filter) => {
   let filtered = [...items];
@@ -287,65 +358,4 @@ export const appAction = (linktext) => {
 
 
 
-// export const createBook = (book) => {
-//   return (dispatch) => {
-//     return Axios.post(apiUrl, book)
-//       .then(response => {
-//         dispatch(createBookSuccess(response.data))
-//       })
-//       .catch(error => {
-//         throw(error);
-//       });
-//   };
-// };
 
-// export const fetchBookById = (bookId) => {
-//   return (dispatch) => {
-//     return Axios.get(apiUrl + '/' +bookId)
-//       .then(response => {
-
-//         dispatch(fetchBookByIdSuccess(response.data));
-//       })
-//       .catch(error => {
-//         throw(error);
-//       });
-//   };
-// };
-
-// export const addToCartSuccess = (item) => {
-//   return {
-//     type: actionTypes.ADD_TO_CART_SUCCESS,
-//     item
-//   }
-// };
-
-// export const addToCart = (item) => {
-//   return (dispatch) => {
-//     return Axios.post('http://57c64baac1fc8711008f2a82.mockapi.io/Cart', item)
-//       .then(response => {
-//         dispatch(addToCartSuccess(response.data))
-//       })
-//       .catch(error => {
-//         throw(error);
-//       });
-//   };
-// };
-
-// export const fetchCartSuccess = (items) => {
-//   return {
-//     type: actionTypes.FETCH_CART_SUCCESS,
-//     items
-//   }
-// };
-
-// export const fetchCart = () => {
-//   return (dispatch) => {
-//     return Axios.get('http://57c64baac1fc8711008f2a82.mockapi.io/Cart')
-//       .then(response => {
-//         dispatch(fetchCartSuccess(response.data))
-//       })
-//       .catch(error => {
-//         throw(error);
-//       });
-//   };
-// };

@@ -20,10 +20,15 @@ class SearchBar extends Component {
         super(props);
     }
     clearFilters(){
-        if(this.props.location.pathname=='/app/filter' && !this.props.filter){
+        if(this.props.location.pathname=='/app/filter' 
+                && typeof this.props.filter=='object' && !this.props.filter.side){
+            this.props.history.push(this.props.link)
+        }
+        else if(this.props.location.pathname=='/app/filter' && this.props.filter && this.props.filter.side){
             this.props.applyFilter(this.props.filteredBasket,{});
             this.props.updateCount(this.props.filteredBasket,{});
-        }else{
+        }
+        else{
             this.props.history.push('/app/filter');
         }
     }
@@ -57,7 +62,8 @@ class SearchBar extends Component {
 const mapStateToProps = (state, ownProps) => {
     return {
         filteredBasket : state.linktext =='Release Orders' ? state.baskets : state.submissions,
-        filter : state.filter
+        filter : state.linktext =='Release Orders' ? (typeof state.baskets.filter != 'function'?state.baskets.filter:{}) : (typeof state.submissions.filter!='function' ? state.submissions.filter : {}),
+        link : state.linktext =='Release Orders' ? '/app/releaseOrder' : '/app/trackSubmission'
     };
   };
 

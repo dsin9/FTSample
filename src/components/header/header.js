@@ -36,7 +36,6 @@ class Header extends Component {
 
 
 const mapStateToProps = (state, ownProps) => {
-    debugger;
     return {
         linktext : state.linktext
                 
