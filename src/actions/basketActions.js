@@ -254,7 +254,7 @@ export const applyFilter = (items,filter) => {
         filtered = filtered.filter(item => item.symbol == filter.security || item.symbol2 == filter.security)
       }
      
-       // filtered = filterByTimeframe(filtered,filter.timeframe);
+        filtered = filterByTimeframe(filtered,filter.timeframe);
       
    return {
     type: actionTypes.APPLY_FILTER,
@@ -263,7 +263,27 @@ export const applyFilter = (items,filter) => {
   }
 };
 
-/* function filterByTimeframe(items,timeframe){
+export const updateCount = (items,filter) => {
+  let filtered = [...items];
+  delete filtered.filter;
+  delete filtered.filteredBasket;
+  delete filtered.filterCount;
+  if(filter && filter.security){
+    filtered = filtered.filter(item => item.symbol == filter.security || item.symbol2 == filter.security)
+  }
+  if(filter && filter.timeframe && filter.timeframe!='All'){
+    filtered = filterByTimeframe(filtered,filter.timeframe);
+  }
+  return {
+   type: actionTypes.UPDATE_COUNT,
+   filterCount : {
+        buy : (filtered.filter(item => item.side == 'Buy' || item.side2 == 'Buy')).length,
+        sell :(filtered.filter(item => item.side == 'Sell' || item.side2 == 'Sell')).length
+   }
+ }
+};
+
+ function filterByTimeframe(items,timeframe){
      switch(timeframe){
         case '1d':
           return isUnderTimeframe(items,1);
@@ -275,11 +295,12 @@ export const applyFilter = (items,filter) => {
           return isUnderTimeframe(items,30);
         case 'Last 90d':
           return isUnderTimeframe(items,90);
-        case 'Last MTD':
-          return isUnderTimeframe(items,getNoOfDays('MTD'));
-        case 'Last QTD':
+        case 'MTD':
+             let currDate = new Date();
+          return isUnderTimeframe(items,currDate.getDate());
+        case 'QTD':
           return isUnderTimeframe(items,getNoOfDays('QTD'));
-        case 'Last YTD':
+        case 'YTD':
           return isUnderTimeframe(items,getNoOfDays('YTD'));
         default : 
           return items;
@@ -291,10 +312,14 @@ export const applyFilter = (items,filter) => {
 
 function getNoOfDays(input){
     switch(input){
-      case 'MTD':
-        var now = new Date();
-        var quarter = Math.floor((now.getMonth() / 3));
-        var firstDate = new Date(now.getFullYear(), quarter * 3, 1);
+      case 'QTD':
+        let now = new Date();
+        let quarter = Math.floor((now.getMonth() / 3));
+        let firstDate = new Date(now.getFullYear(), quarter * 3, 1);
+        return days_between(firstDate,new Date());
+      case 'YTD':
+         firstDate = new Date(new Date().getFullYear(), 0, 1);
+        return days_between(firstDate,new Date());
     
     }
 }
@@ -313,6 +338,7 @@ function days_between(date1, date2) {
       var difference_ms = Math.abs(date1_ms - date2_ms)
   
       // Convert back to days and return
+      console.log("Number of days",Math.round(difference_ms/ONE_DAY));
       return Math.round(difference_ms/ONE_DAY)
   
   }
@@ -329,25 +355,9 @@ function isUnderTimeframe(items,noOfDays){
     }
   }
   return filteredItems;
-} */
+} 
 
 
-export const updateCount = (items,filter) => {
-  let filtered = [...items];
-  delete filtered.filter;
-  delete filtered.filteredBasket;
-  delete filtered.filterCount;
-  if(filter && filter.security){
-    filtered = filtered.filter(item => item.symbol == filter.security || item.symbol2 == filter.security)
-  }
-  return {
-   type: actionTypes.UPDATE_COUNT,
-   filterCount : {
-        buy : (filtered.filter(item => item.side == 'Buy' || item.side2 == 'Buy')).length,
-        sell :(filtered.filter(item => item.side == 'Sell' || item.side2 == 'Sell')).length
-   }
- }
-};
 
 export const appAction = (linktext) => {
   return {

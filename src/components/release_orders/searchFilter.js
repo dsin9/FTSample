@@ -33,7 +33,8 @@ class SearchFilter extends Component {
 
    filterBySide = (side) => {
      let security = this.props.filter && this.props.filter.security ? this.props.filter.security : '';
-     let filter={side : side,security:security,timeframe:'ALL'};
+     let timeframe = this.props.filter && this.props.filter.timeframe ? this.props.filter.timeframe : 'All';
+     let filter={side : side,security:security,timeframe:timeframe};
      this.filter = filter;
   
      this.props.applyFilter(this.items,filter);
@@ -76,7 +77,7 @@ class SearchFilter extends Component {
             <div onClick={()=>history.push('/securitiesSearch')} className={this.filter && this.filter.security ? 'activeFilter btn col-xs-6' : 'inactiveFilter btn col-xs-6'} style={{ lineHeight: '50px', width: '188px', textAlign: 'center',marginRight:'2px',fontSize:'20px' }}>
               <label style={{fontWeight:'normal'}}>{this.filter && this.filter.security ? this.filter.security : 'Security'}</label>
             </div>
-            <div onClick={()=>history.push('/selectTimeframe')} className='inactiveFilter btn col-xs-6' style={{ lineHeight: '50px', width: '188px', textAlign: 'center',marginLeft:'2px',fontSize:'20px' }}>
+            <div onClick={()=>history.push('/selectTimeframe')} className={this.filter && this.filter.timeframe && this.filter.timeframe!='All' ? 'activeFilter btn col-xs-6' : 'inactiveFilter btn col-xs-6'} style={{ lineHeight: '50px', width: '188px', textAlign: 'center',marginLeft:'2px',fontSize:'20px' }}>
               <label style={{fontWeight:'normal'}}>Timeframe-{this.filter.timeframe ? this.filter.timeframe : 'All'}</label>
             </div>
           </div>

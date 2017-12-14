@@ -38,8 +38,10 @@ class SecuritySearch extends Component {
     this.setState({searchTerm: term})
   }
   selectSecurity(symbol){
-      let filter = this.props.filter || {};
+      let filter = typeof this.props.filter == 'function' ? {}: this.props.filter;
       filter.security = symbol;
+      filter.side = filter.side ? filter.side : '';
+      filter.timeframe = filter.timeframe ? filter.timeframe : '';
       this.props.applyFilter(this.items,filter);
       this.props.updateCount(this.items,filter);
       this.props.history.push('/app/filter'); 

@@ -21,10 +21,12 @@ class SearchBar extends Component {
     }
     clearFilters(){
         if(this.props.location.pathname=='/app/filter' 
-                && typeof this.props.filter=='object' && !this.props.filter.side){
+                && typeof this.props.filter=='object' && (!this.props.filter.side 
+                                                            && !this.props.filter.security 
+                                                            && !this.props.filter.timeframe)){
             this.props.history.push(this.props.link)
         }
-        else if(this.props.location.pathname=='/app/filter' && this.props.filter && this.props.filter.side){
+        else if(this.props.location.pathname=='/app/filter' && this.props.filter){
             this.props.applyFilter(this.props.filteredBasket,{});
             this.props.updateCount(this.props.filteredBasket,{});
         }

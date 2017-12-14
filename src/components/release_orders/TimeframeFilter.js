@@ -29,8 +29,10 @@ class TimeframeFilter extends Component {
       }
   }
   selectTimeframe(timeframe){
-      let filter = this.props.filter || {};
+    let filter = typeof this.props.filter == 'function' ? {}: this.props.filter;
       filter.timeframe = timeframe;
+      filter.security = filter.security ? filter.security : '';
+      filter.side = filter.side ? filter.side : '';
       this.props.applyFilter(this.items,filter);
       this.props.updateCount(this.items,filter);
       this.props.history.push('/app/filter'); 
